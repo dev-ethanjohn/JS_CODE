@@ -1,18 +1,22 @@
-/*
-    1. Create a variable called "food" that points to the String "Donut"
+/* 
+   Create a constant variable of each of the following primitive types:
+   - String
+   - Number
+   - Boolean
+   - Null
+   - Undefined
 
-    2. Create a series of if/else if/else statements that:
-        - First checks for "food" being equal to "Fish" and console.logs
-          "Sounds fishy..." if true
-        - Then checks for "food" being equal to "Hummus" and console.logs
-          "Want chips with that?" if true
-        - Then checks for "food" being equal to "Sushi" and console.logs
-          "With or without seaweed?" if true
-        - Console.logs("Food not in our database, sorry!") in all other cases
+   Use console.log to log out each variable to the terminal at the end.
 
-    3. Run the program and make sure the correct things gets printed out, then
-       change "food" to be "Sushi" and verify it still works as exected.
+   HINT1: You can run your file in the terminal using this command: node <file_name>
+          For example, if your file is called ps1.js, you would type: node ps1.js
 
-    4. Create a switch statement that does step 2 and then repeat step 3 to
-       make sure it works the same as the if/else if/else statements
+   HINT2: Make sure your terminal is "looking at" the correct folder where your code is
 */
+const name = "Ethan";
+const age = 23;
+const student = true;
+const empty = null;
+const unknown = undefined;
+
+console.log(name, age, student, empty, unknown);

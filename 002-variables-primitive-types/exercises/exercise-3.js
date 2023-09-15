@@ -1,12 +1,22 @@
-/*
-    1. Create a variable called "points" that points at the Array:
-       [3, 4, 1, 0, 1, 5, 6]
+/* 
+    Use Google/search to look up the *typeof* operator in Javascript.
 
-    2. Create a loop that loops over "points" and inside the loop use
-       a switch statement that has these cases:
-       - 0-2: print out only "Good try!"
-       - 3-5: print out only "Very well done!"
-       - Otherwise only print out "Wow, shooting for the moon!"
+    Use typeof to log out the types for each of the 5 primitive types
+    to the terminal using console.log.
 
-    3. Run the code and make sure the correct messages get printed out
+    *HINT* - MDN Web Docs are a good resource
 */
+const name = "Ethan John";
+console.log(typeof name); // string
+
+const age = 23;
+console.log(typeof age); // number
+
+const isAStudent = true;
+console.log(typeof isAStudent); // boolean
+
+const blank = null;
+console.log(typeof blank); // object
+
+const unknown = undefined;
+console.log(typeof unknown); // undefined

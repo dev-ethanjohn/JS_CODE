@@ -1,13 +1,20 @@
-/*
-    1. Create a variable called "activities" that points at the Array:
-       ["Swimming", "Hiking", "Rock Climbing", "Biking", "Running"]
+/* 
+    1. Create a variable called name that points at a string containing your name
+    2. On the next line, re-assign the variable above to your favourite musician's name
+    3. On the next line, re-assign the variable again to the value: true
+    3. On the next line, re-assign the variable one last time to the value: 42
 
-    2. Create a loop that loops over "activities" and inside the loop
-       use a switch statement that has these cases:
-       - "Swimming": only print out "Like a fish!"
-       - "Rock Climbing": only print out "Like a mountain goat!"
-       - "Running": only print out "Like a cheetah!"
-       - Otherwise only print out "I'm sure some animal does that..."
-
-    3. Run the code and make sure the correct messages get printed out
+    After each of the above steps, log out the variable to the terminal with console.log.
 */
+
+let name = "Ethan John";
+console.log(name);
+
+name = "Dept.";
+console.log(name);
+
+name = true;
+console.log(name);
+
+name = 42;
+console.log(name);
