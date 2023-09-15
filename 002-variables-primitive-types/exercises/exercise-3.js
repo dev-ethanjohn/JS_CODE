@@ -20,3 +20,5 @@ console.log(typeof blank); // object
 
 const unknown = undefined;
 console.log(typeof unknown); // undefined
+
+// Learn to USE GOOGLE
