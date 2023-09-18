@@ -20,3 +20,36 @@
      - const sum1 = sumOfSquares(2, 3); // "sum1" should be 13 (4 + 9)
      - const sum2 = sumOfSquares(3, 4); // "sum1" should be 25 (9 + 16)
 */
+
+// const sumOfSquares = (num1, num2) => {
+//   // nested function
+
+//   const square = (num) => {
+//     return num ** 2;
+//   };
+
+//   return num1 ** 2 + num2 ** 2;
+// };
+
+// const sum1 = sumOfSquares(2, 3);
+// const sum2 = sumOfSquares(3, 4);
+
+// console.log(sum1, sum2);
+
+//
+
+const square = (num) => {
+  return num ** 2;
+};
+
+const sumOfSquares = (num1, num2) => {
+  // num1 = 1, num2 = 3
+  return square(num1) + square(num2);
+  // return square(2) + square(3)
+  // return 4 + 9
+};
+
+const sum1 = sumOfSquares(2, 3);
+const sum2 = sumOfSquares(3, 4);
+
+console.log(sum1, sum2); // 13  25
