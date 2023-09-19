@@ -8,3 +8,31 @@
     WHY does this happen?
     WHAT is a String, really?
 */
+const greeting = "Hello, nice to meet you!";
+
+for (count = 0; count < greeting.length; count++) {
+  console.log(greeting[count]);
+}
+/*
+H
+e
+l
+l
+o
+,
+
+n
+i
+c
+
+t
+
+e
+t
+
+y
+o
+u
+!
+
+*/

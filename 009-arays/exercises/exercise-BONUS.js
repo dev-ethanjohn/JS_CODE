@@ -19,3 +19,12 @@
 
     WHY is this?
 */
+
+const bakery = ["Cake", "Cookie", "Bread", "Scone"];
+console.log(bakery); // [ 'Cake', 'Cookie', 'Bread', 'Scone' ]
+
+const myBakery = bakery;
+myBakery.push("Croissant");
+myBakery.push("Granola");
+
+console.log(myBakery); // [ 'Cake', 'Cookie', 'Bread', 'Scone', 'Croissant', 'Granola' ]
