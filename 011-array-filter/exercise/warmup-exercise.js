@@ -5,3 +5,21 @@
     
     3. Print out both "practice" and the new filtered array
 */
+
+const practice = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+console.log(practice);
+/*
+[
+  10, 11, 12, 13, 14,
+  15, 16, 17, 18, 19,
+  20
+]
+
+*/
+
+const evenNumber = practice.filter((num) => {
+  if (num % 2 === 0) {
+    return true;
+  }
+});
+console.log(evenNumber); // [ 10, 12, 14, 16, 18, 20 ]

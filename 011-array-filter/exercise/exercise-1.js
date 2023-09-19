@@ -9,3 +9,18 @@
 
     HINT: Google for "javascript string contains"
 */
+
+const countries = [
+  "France",
+  "South Africa",
+  "Brazil",
+  "United States",
+  "Sweden",
+];
+
+console.log(countries);
+
+const multiWordCountries = countries.filter((country) => {
+  return country.includes(" ");
+});
+console.log(multiWordCountries); // [ 'South Africa', 'United States' ]

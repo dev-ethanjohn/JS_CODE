@@ -8,3 +8,14 @@
 
     3. Print out both arrays
 */
+
+const prices = [1.23, 19.99, 85.2, 32, 87, 8, 5.2];
+console.log(prices);
+
+const lowPrices = prices.filter((price) => {
+  if (price * 1.15 < 10) {
+    return true;
+  }
+});
+
+console.log(lowPrices); // [ 1.23, 8, 5.2 ]

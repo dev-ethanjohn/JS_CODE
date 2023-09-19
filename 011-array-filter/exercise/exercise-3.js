@@ -12,3 +12,16 @@
 
     HINT: Google for "javascript array includes"
 */
+
+const values = [
+  [1, 2, 3],
+  [0, 0, 1],
+  [3, 6, 9],
+  [0, 1, 2],
+];
+console.log(values);
+
+const hasTwos = values.filter((value) => {
+  return value.includes(2);
+});
+console.log(hasTwos); // [ [ 1, 2, 3 ], [ 0, 1, 2 ] ]
