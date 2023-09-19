@@ -14,6 +14,9 @@ const items = ["light", "banana", "phone", "book", "mouse"];
 console.log(items); // [ 'light', 'banana', 'phone', 'book', 'mouse' ]
 
 const plurals = items.map((item) => {
+  if (item === "mouse") {
+    return "mice";
+  }
   return item + "s";
 });
-console.log(plurals); // [ 'lights', 'bananas', 'phones', 'books', 'mouses' ]
+console.log(plurals); // [ 'lights', 'bananas', 'phones', 'books', 'mice' ]

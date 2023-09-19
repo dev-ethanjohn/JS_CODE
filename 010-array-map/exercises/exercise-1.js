@@ -17,9 +17,8 @@ const newBools = bools.map((bool) => {
   if (bool === true) {
     // Math.floor(Math.random()*100) + 1;  returns a random integer from 1 to 100
     return Math.floor(Math.random() * 100) + 1;
-  } else {
-    return 0;
-  }
+  } // else is implicit
+  return 0;
 });
 
 console.log(newBools); // [ 82, 85, 0, 50, 0, 0 ]
