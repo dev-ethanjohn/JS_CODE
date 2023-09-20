@@ -13,3 +13,35 @@
     BONUS: How can you get rid of the trailing '-' ?
     TIP: Look up reduce on Google using docs like MDN
 */
+
+const companies = [
+  "apple",
+  "tesla",
+  "spacex",
+  "amazon",
+  "meta",
+  "google",
+  // chain
+].filter((company) => {
+  return !company.startsWith("a");
+});
+
+console.log(companies); // [ 'tesla', 'spacex', 'meta', 'google' ]
+console.log("-------------------");
+
+const modded = companies.reduce((concatCompanies, company) => {
+  return concatCompanies + company + "-";
+}, "");
+
+console.log(modded); // tesla-spacex-meta-google-
+
+// const companies = ["apple", "tesla", "spacex", "amazon", "meta", "google"];
+
+// const modded = companies.reduce((concatCompanies, company) => {
+//   if (company.startsWith("a")) {
+//     return concatCompanies;
+//   }
+//   console.log(concatCompanies, company);
+//   return concatCompanies + company + "-";
+// }, "");
+// console.log(modded);
