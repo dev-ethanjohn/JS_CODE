@@ -21,3 +21,33 @@
 
     *This is a challenging exercise - take it slow and step by step
 */
+
+const houseForSale = {
+  area: 940,
+  value: 320000,
+  streetName: "Fifth Street",
+  build: "2012",
+  owner: { name: "Blake", age: 29 },
+  offers: [290000, 295000, 315000, 312000],
+};
+
+console.log(houseForSale);
+console.log("----------------------");
+
+// DELETE build key
+delete houseForSale.build;
+console.log(houseForSale);
+
+// Change Blake's age to 30
+houseForSale.owner.age = 30;
+console.log(houseForSale);
+
+// Get the max offer
+console.log(
+  houseForSale.offers.reduce((max, offer) => {
+    return Math.max(max, offer);
+  }, 0)
+); // 315000
+
+houseForSale["sale price"] = 312000;
+console.log(houseForSale);

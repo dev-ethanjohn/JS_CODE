@@ -14,3 +14,11 @@
 
     BONUS: How might the built-in "console" work?
 */
+
+const myConsole = {
+  key: (message) => {
+    console.log(message);
+  },
+};
+
+console.log("Hello, friend!");
