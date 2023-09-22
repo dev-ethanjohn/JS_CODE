@@ -16,3 +16,11 @@
 
     *This is very challenging and is a common interview question
 */
+const numbers = [10, 20, 15, 30, 15, 20, 35, 60, 10];
+
+const duplicate = new Map();
+duplicate.set("number");
+
+const dup = numbers.filter((number) => {
+  return;
+});
