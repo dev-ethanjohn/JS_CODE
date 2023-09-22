@@ -30,3 +30,16 @@ for (let count = 0; count < numbers.length; count++) {
 15 x 5 = 75
 
 */
+
+// Pratice 2: Sept 22
+/*
+// 1. Create a variable called "multiple" and initialize it to 5
+
+// 2. Create an array with the numbers 10-15 (inclusive)
+
+// 3. Loop through the array and on each iteration:
+    // a. Generate a random multiplier between 2 and 10
+    // b. Multiply the number by the random multiplier
+    // c. Print the result in the format: "10 x 5 = 50"
+
+*/

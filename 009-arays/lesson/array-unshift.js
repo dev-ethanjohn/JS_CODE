@@ -1,4 +1,4 @@
-// .unshift() Adds an item or element in an Array at the beginning
+// .unshift() adds an item or element at the beginning of an array
 const animals = ["monkey", "dog", "cat", "koala", "elephant"];
 console.log(animals); // [ 'monkey', 'dog', 'cat', 'koala', 'elephant' ]
 
