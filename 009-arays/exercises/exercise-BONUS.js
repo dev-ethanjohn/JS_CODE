@@ -56,3 +56,14 @@ console.log(myBakery); // [ 'Cake', 'Cookie', 'Bread', 'Scone', 'Croissant', 'Gr
 // WHY do they both change when you only modified "myFruitBasket"?
 
  */
+
+const fruitBasket = ["Apple", "Banana", "Orange", "Grapes"];
+console.log(fruitBasket);
+
+const myFruitBasket = fruitBasket;
+
+myFruitBasket.push("Mango", "Pineapple");
+console.log(myFruitBasket); // [ 'Apple', 'Banana', 'Orange', 'Grapes', 'Mango', 'Pineapple' ]
+
+myFruitBasket.splice(2, 1, "Strawberry");
+console.log(myFruitBasket); // [ 'Apple', 'Banana', 'Strawberry', 'Grapes', 'Mango', 'Pineapple' ]

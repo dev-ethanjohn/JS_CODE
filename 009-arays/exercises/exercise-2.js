@@ -54,3 +54,12 @@ u
 
 
 */
+
+const sentence = "Coding is fun and challenging!";
+
+for (i = 0; i < sentence.length; i++) {
+  let asciiCode = sentence.charCodeAt(i);
+
+  // Print the character and its ASCII code
+  console.log(`Character: ${sentence[i]}, ASCII Code: ${asciiCode}`);
+}

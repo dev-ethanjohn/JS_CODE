@@ -1,6 +1,5 @@
 // (1) Sept 22
 /*
-
 Certainly, let's focus on exercises specifically related to arrays based on your current knowledge:
 
 Exercise 1: Basic Array Operations
@@ -37,6 +36,5 @@ Write code to remove the last item from the list.
 Write code to add a new item to the beginning of the list.
 Print the modified shoppingList.
 These exercises should provide you with a solid foundation for working with arrays and help you refine your skills in this area. If you have any questions or need hints for any of these exercises, please feel free to ask.
-
 
 */

@@ -42,7 +42,42 @@ console.log(total / grades.length); // 72
 // Twist: Additionally, print out the number of students who scored above the average.
 
 // WHY is this? How does changing the grading scale affect the results?
-
-
-
 */
+
+const totalPoints = 0;
+const scores = [75, 88, 92, 67, 55, 98];
+sum = 0;
+
+let aveScore = (score) => {
+  for (i = 0; i < scores.length; i++) {
+    sum += scores[i];
+  }
+  return sum / scores.length;
+};
+
+let ave = aveScore(scores);
+console.log(`The average is ${ave.toFixed(2)}`);
+console.log("The average is ", +ave.toFixed(2));
+
+if (ave >= 85 && ave <= 100) {
+  console.log("A");
+} else if (ave >= 70 && ave <= 84) {
+  console.log("B");
+} else if (ave >= 55 && ave <= 69) {
+  console.log("C");
+} else if (ave >= 40 && ave <= 54) {
+  console.log("D");
+} else {
+  console.log("F");
+}
+
+let numberOfPassers = [];
+for (i = 0; i < scores.length; i++) {
+  if (scores[i] > ave) {
+    numberOfPassers.push(scores[i]);
+  } else {
+    continue;
+  }
+}
+
+console.log(numberOfPassers);

@@ -33,7 +33,7 @@ for (let count = 0; count < numbers.length; count++) {
 
 // Pratice 2: Sept 22
 /*
-// 1. Create a variable called "multiple" and initialize it to 5
+// 1. Create a variable called "multiples" and initialize it to 5
 
 // 2. Create an array with the numbers 10-15 (inclusive)
 
@@ -43,3 +43,12 @@ for (let count = 0; count < numbers.length; count++) {
     // c. Print the result in the format: "10 x 5 = 50"
 
 */
+
+const multiples = 5;
+const numArray = [10, 11, 12, 13, 14, 15];
+
+for (i = 0; i < numArray.length; i++) {
+  let randomMultiplier = Math.floor(Math.random() * 9) + 2;
+  let result = randomMultiplier * numArray[i];
+  console.log(`${numArray[i]} x ${randomMultiplier} = ${result}`);
+}
