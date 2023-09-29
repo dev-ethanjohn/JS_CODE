@@ -35,6 +35,8 @@ const modded = companies.reduce((concatCompanies, company) => {
 
 console.log(modded); // tesla-spacex-meta-google-
 
+// SOLUTION using if statement
+
 // const companies = ["apple", "tesla", "spacex", "amazon", "meta", "google"];
 
 // const modded = companies.reduce((concatCompanies, company) => {

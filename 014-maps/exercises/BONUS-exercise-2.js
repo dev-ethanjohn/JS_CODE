@@ -18,9 +18,15 @@
 */
 const numbers = [10, 20, 15, 30, 15, 20, 35, 60, 10];
 
-const duplicate = new Map();
-duplicate.set("number");
+const seenNumbers = new Map();
 
-const dup = numbers.filter((number) => {
-  return;
-});
+for (i = 0; i < numbers.length; i++) {
+  //
+  if (seenNumbers.has(numbers[i])) {
+    console.log(i, seenNumbers.get(numbers[i]));
+  } else {
+    seenNumbers.set(numbers[i], i);
+  }
+}
+
+console.log(seenNumbers);
