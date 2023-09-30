@@ -17,3 +17,32 @@
          {age: 11, name: "Dragon"}, {age: 74, name: "Dragon"},
          {age: 39, name: "Dragon"}, {age: 2, name: "Dragon"}]
 */
+
+const ages = [10, 42, 15, 22, 11, 74, 39, 2];
+
+const results = [];
+
+for (const age of ages) {
+  const dragonAge = {
+    age: age,
+    name: "Dragon",
+  };
+
+  results.push(dragonAge);
+}
+
+console.log(results);
+/*
+[
+  { age: 10, name: 'Dragon' },
+  { age: 42, name: 'Dragon' },
+  { age: 15, name: 'Dragon' },
+  { age: 22, name: 'Dragon' },
+  { age: 11, name: 'Dragon' },
+  { age: 74, name: 'Dragon' },
+  { age: 39, name: 'Dragon' },
+  { age: 2, name: 'Dragon' }
+]
+
+
+*/

@@ -15,3 +15,20 @@
 
     4. Print out "capsNames"
 */
+
+const names = new Set();
+const capsNames = new Set();
+
+names.add("Bilbo");
+names.add("Hermione");
+names.add("Spock");
+names.add("Leia");
+names.add("Leia");
+
+console.log(names); // Set(4) { 'Bilbo', 'Hermione', 'Spock', 'Leia' }
+
+for (const name of names) {
+  capsNames.add(name.toUpperCase());
+}
+
+console.log(capsNames); // Set(4) { 'BILBO', 'HERMIONE', 'SPOCK', 'LEIA' }
