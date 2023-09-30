@@ -9,3 +9,26 @@
     4. Repeat the same steps above but with an array
        How does this differ?
 */
+
+const numbers = new Set();
+numbers.add(1);
+numbers.add(2);
+numbers.add(3);
+numbers.add(4);
+numbers.add(5);
+numbers.add(2);
+numbers.add(3);
+numbers.add(4);
+
+// Duplicates will be ignored
+console.log(numbers); // Set(5) { 1, 2, 3, 4, 5 }
+
+// with ARRAYS
+const numbersArray = [1, 2, 3, 4, 5, 2, 3, 4];
+console.log(numbersArray);
+/*
+[
+  1, 2, 3, 4,
+  5, 2, 3, 4
+]
+*/
