@@ -29,3 +29,54 @@
 
     BONUS: WHY does it work this way?
 */
+
+console.log("Program started");
+
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(
+      (message = {
+        data: "Hello, friend!",
+        error: null,
+      })
+    );
+  }, 5000);
+});
+
+console.log(myPromise);
+console.log("Program in progess...");
+
+// 1st promise chain
+myPromise
+  .then((message) => {
+    console.log(message);
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve();
+      }, 2000);
+    });
+  })
+  .then((message) => {
+    console.log("First promise chain complete!");
+  });
+
+// 2nd promise chain
+myPromise
+  .then((secondMessage) => {
+    console.log(secondMessage);
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve();
+      }, 10000);
+    });
+  })
+  .then((message) => {
+    console.log("Second promise chain complete!");
+  });
+
+// total execution time is 15 seconds
+// 1st promise chain = 5sec + 2 sec = 7sec
+// with 2nd promise chain = 5 sec + 10 sec = 15sec
+
+// Both chains run in parallel
+// if 7 seconds, it logs "First promise chain complete!", then after 15 sec  it logs "Second promise chain complete!"
