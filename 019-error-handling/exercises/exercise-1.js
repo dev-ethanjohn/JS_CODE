@@ -6,3 +6,29 @@
     4. Catch the error and console.error the loop number
     5. Make sure the loop goes all the way to 10
 */
+
+for (i = 1; i <= 10; i++) {
+  console.log(i);
+  // the code will continue up to 10 since the loop is outside the try-catch block. If the loop is inside, then it will stop at loop 5 with an error message
+  try {
+    if (i === 5) {
+      throw new Error("Boom!");
+    }
+  } catch (error) {
+    console.error(`Error on loop number ${i}`);
+  }
+}
+
+/*
+1
+2
+3
+4
+5
+Error: Boom!
+6
+7
+8
+9
+10
+*/

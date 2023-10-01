@@ -13,3 +13,58 @@
     4. What is the issue with this setup/code?
     5. How can we fix it so we can access "number" in the catch?
 */
+let number = 1337;
+let finalNumberAfterAddition;
+try {
+  const getRandomNumber = (number) => {
+    const randomNumber = Math.floor(Math.random() * 1001);
+    return number + randomNumber;
+  };
+
+  addedNumbers = getRandomNumber(number);
+  console.log(addedNumbers);
+
+  if (addedNumbers < 2000) {
+    throw new Error("You lose!");
+  } else {
+    console.log("You win!");
+  }
+} catch (error) {
+  console.error(error);
+  console.log(`Number is: ${addedNumbers}`);
+}
+
+console.log("Game completed!");
+
+/*
+1904
+
+Error: You lose!
+Number is: 1904
+
+Game completed!
+*/
+
+// Other SOLUTION
+
+/*
+let number = 1337;
+
+try {
+    const randomNumber = Math.floor(Math.random() * 1001);
+    number += randomNumber;
+    console.log(number);
+
+    if (number < 2000) {
+        throw new Error("You lose!");
+    } else {
+        console.log("You win!")
+    }
+} catch (error){
+    console.error(error);
+    console.log(`Number is: ${number}`);
+}
+
+console.log("Game completed!")
+
+*/
