@@ -21,3 +21,69 @@
     Q1: Which of these 2 methods do you prefer?
     Q2: Which of these 2 methods is easier to read?
 */
+
+// const goGetCandies = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve({ candy: "sour keys", quantity: 10 });
+//     }, 2000);
+//   });
+// };
+
+// const sellCandies = (store) => {
+//   //   return (number = quantity * 25);
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const totalValue = store.candy.quantity * 25;
+//       resolve(totalValue);
+//     }, 3000);
+//   });
+// };
+
+// console.log("Program starting...");
+
+// const getMoney = async () => {
+//   const resultObject = await goGetCandies();
+//   console.log(resultObject);
+//   const resultTotalValue = await sellCandies(resultObject);
+//   console.log("Earnings: ", resultTotalValue);
+//   console.log("Program done!");
+// };
+
+// getMoney();
+
+const goGetCandies = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve({ candy: "sour keys", quantity: 10 });
+    }, 2000);
+  });
+};
+
+const sellCandies = (store) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const totalValue = store.quantity * 25; // Calculate the total value
+      resolve(totalValue); // Resolve the promise with the total value
+    }, 3000);
+  });
+};
+
+console.log("Program starting...");
+
+const getMoney = async () => {
+  try {
+    const resultObject = await goGetCandies();
+    console.log(resultObject);
+
+    // Call sellCandies with the resultObject and await the result
+    const resultTotalValue = await sellCandies(resultObject);
+
+    console.log("Earnings: ", resultTotalValue); // Print the total earnings
+    console.log("Program done!");
+  } catch (error) {
+    console.error("An error occurred:", error);
+  }
+};
+
+getMoney();
