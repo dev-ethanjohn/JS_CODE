@@ -70,6 +70,7 @@ const sellCandies = (store) => {
 };
 
 console.log("Program starting...");
+const firstTimestamp = new Date();
 
 const getMoney = async () => {
   try {
@@ -80,10 +81,24 @@ const getMoney = async () => {
     const resultTotalValue = await sellCandies(resultObject);
 
     console.log("Earnings: ", resultTotalValue); // Print the total earnings
-    console.log("Program done!");
+    const secondTimestamp = new Date();
+    const timeElapsed = secondTimestamp - firstTimestamp;
+    console.log("Program complete!", timeElapsed);
   } catch (error) {
     console.error("An error occurred:", error);
+    const secondTimestamp = new Date();
+    const timeElapsed = secondTimestamp - firstTimestamp;
+    console.log("Program failed!", timeElapsed);
   }
 };
 
 getMoney();
+
+/* TOTAL 5 SEC
+Program starting...
+// After 2 sec
+{ candy: 'sour keys', quantity: 10 }
+// After 3 sec
+Earnings:  250
+Program complete! 5030
+*/
