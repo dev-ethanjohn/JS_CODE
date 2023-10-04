@@ -18,3 +18,75 @@
        Print out both "animal" and "koala" again and observe the change.
        Does this make sense?
 */
+const animal = {
+  name: "Koala",
+  kingdom: "Australia",
+  cute: true,
+  friends: [{ name: "Kangaroo", kingdom: "Australia" }],
+};
+
+const koala = { ...animal, tail: false };
+
+console.log(animal);
+/*
+{
+  name: 'Koala',
+  kingdom: 'Australia',
+  cute: true,
+  friends: [ { name: 'Kangaroo', kingdom: 'Australia' } ]    
+}
+*/
+console.log(koala);
+/*
+{
+  name: 'Koala',
+  kingdom: 'Australia',
+  cute: true,
+  friends: [ { name: 'Kangaroo', kingdom: 'Australia' } ],   
+  tail: false
+}
+*/
+
+// CHANGE cute key to false
+animal.cute = false;
+console.log(animal);
+/*
+{
+  name: 'Koala',
+  kingdom: 'Australia',
+  cute: false,
+  friends: [ { name: 'Kangaroo', kingdom: 'Australia' } ]    
+}
+*/
+console.log(koala);
+/*
+{
+  name: 'Koala',
+  kingdom: 'Australia',
+  cute: true,
+  friends: [ { name: 'Kangaroo', kingdom: 'Australia' } ],   
+  tail: false
+}
+*/
+animal.friends[0].cute = false;
+console.log(animal);
+/*
+{
+  name: 'Koala',
+  kingdom: 'Australia',
+  cute: false,
+  friends: [ { name: 'Kangaroo', kingdom: 'Australia', cute: 
+true } ]
+}
+*/
+console.log(koala);
+/*
+{
+  name: 'Koala',
+  kingdom: 'Australia',
+  cute: true,
+  friends: [ { name: 'Kangaroo', kingdom: 'Australia', cute: 
+true } ],
+  tail: false
+}
+*/
