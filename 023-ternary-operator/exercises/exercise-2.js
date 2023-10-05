@@ -13,3 +13,29 @@
     BONUS: Can you shorten this with the short "arrow function
            expression" syntax?
 */
+
+const wizards = ["Gandalf", "Voldemort", "Harry", "Jafar", "Saruman", "Merlin"];
+
+// USING if else
+const newWiz = wizards.map((wiz) => {
+  if (wiz.includes("n")) {
+    return wiz.replace("n", "*");
+  } else {
+    return wiz.toUpperCase();
+  }
+});
+
+console.log(newWiz); // [ 'Ga*dalf', 'VOLDEMORT', 'HARRY', 'JAFAR', 'Saruma*', 'Merli*' ]
+
+// Using ternary
+const newWizTernary = wizards.map((wiz) => {
+  return wiz.includes("n") ? wiz.replace("n", "*") : wiz.toUpperCase();
+});
+
+console.log(newWizTernary); // [ 'Ga*dalf', 'VOLDEMORT', 'HARRY', 'JAFAR', 'Saruma*', 'Merli*' ]
+
+// Shorter Version
+const ternaryWizShort = wizards.map((wiz) =>
+  wiz.includes("n") ? wiz.replace("n", "*") : wiz.toUpperCase()
+);
+console.log(ternaryWizShort); // [ 'Ga*dalf', 'VOLDEMORT', 'HARRY', 'JAFAR', 'Saruma*', 'Merli*' ]
