@@ -7,3 +7,13 @@
 
     3. Print out your variables containing "Lion" and "Rabbit"
 */
+
+const jungle = ["Monkey", "Lion", "Panda", "Rabbit", "Squirrel"];
+
+const [, lion, , rabbit, ,] = jungle;
+console.log(jungle); // [ 'Monkey', 'Lion', 'Panda', 'Rabbit', 'Squirrel' ]
+console.log(lion, rabbit); // Lion Rabbit
+
+// SHORT VERSION
+// const [, lion, , rabbit, ,] = ["Monkey", "Lion", "Panda", "Rabbit", "Squirrel"];
+// console.log(lion, rabbit); // Lion Rabbit
