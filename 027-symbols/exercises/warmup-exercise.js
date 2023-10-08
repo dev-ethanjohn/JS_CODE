@@ -11,3 +11,13 @@
     4. Are the two symbols equivalent? (Equality check)
        Why or why not?
 */
+
+const baboon = Symbol("Monkey");
+const gorilla = Symbol("Monkey");
+
+console.log(typeof baboon); // symbol
+console.log(typeof gorilla); // symbol
+console.log(baboon.description); // Monkey
+console.log(gorilla.description); // Monkey
+
+console.log(baboon === gorilla); // false

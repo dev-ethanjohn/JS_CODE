@@ -1,3 +1,4 @@
+const startTime = Date.now();
 /*
     1. Create an async Generator function that has a 50%
        chance of yielding either of the following Promises:
@@ -42,6 +43,10 @@ const asyncGenExecutor = async () => {
   for await (const promise of asyncGenObject) {
     console.log(promise);
   }
+
+  const endTime = Date.now();
+  const elapsedTime = endTime - startTime;
+  console.log(`Total Execution Time: ${elapsedTime}ms`);
 };
 
 asyncGenExecutor();
