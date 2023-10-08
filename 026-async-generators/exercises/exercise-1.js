@@ -11,3 +11,45 @@
 
     *HINT: Math.random() is your friend
 */
+
+const asyncGen = async function* () {
+  let i = 0;
+  while (true) {
+    const randomValue = Math.random(); // random number between 0 and 1
+    if (randomValue < 0.5) {
+      yield new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Fast");
+        }, 500);
+      });
+    } else {
+      yield new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Slow!");
+        }, 3000);
+      });
+    }
+    i++;
+    if (i === 5) {
+      return;
+    }
+  }
+};
+
+const asyncGenObject = asyncGen();
+
+const asyncGenExecutor = async () => {
+  for await (const promise of asyncGenObject) {
+    console.log(promise);
+  }
+};
+
+asyncGenExecutor();
+
+/* (generate random number with equivalent yield based on the condition)
+Slow!
+Fast
+Slow!
+Slow!
+Slow! (ends at 5th iteration)
+*/
