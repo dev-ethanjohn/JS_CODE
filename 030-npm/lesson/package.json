@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  },
+  "scripts": {
+    "list-all": "dir /b /a",
+    "list-files": "dir /b /a-d",
+    "list-folders": "dir /b /ad",
+    "list-deps": "npm ls --depth=0"
+  }
+}
